@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: true
+chapters:
+- file: sections/co2_authors_SOP_development_process
+- file: sections/co2_introduction
+- file: sections/co2_sensors_integration
+- file: sections/co2_pre_deployment
+- file: sections/co2_mission_execution
+- file: sections/co2_rtqc
+- file: sections/co2_post_recovery
+- file: sections/co2_dmqc
+- file: sections/co2_sharing
+- file: sections/co2_references
+- file: sections/co2_acknowledgement
+- file: sections/co2_appendix
