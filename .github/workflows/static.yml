@@ -14,14 +14,44 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
+  
 jobs:
+=  build:
+    runs-on: ubuntu-latest
+    if: github.repository == 'britairving/Carbon_Dioxide_SOP'
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+      - uses: actions/checkout@v3
+
+      # Install dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # Build the book
+      - name: Build the book
+        run: |
+          jupyter-book build .
+
+      # Push the site's HTML to github-pages (only if on main, previews are sent to netlify)
+      - name: Deploy to GitHub pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
+          enable_jekyll: false
   # Single deploy job since we're just deploying
   deploy:
     environment:
