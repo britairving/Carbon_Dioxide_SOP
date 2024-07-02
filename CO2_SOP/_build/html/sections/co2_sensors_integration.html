@@ -1,0 +1,689 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Sensors and integrations &#8212; Carbon Dioxide SOP</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "britairving/Carbon_Dioxide_SOP");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sections/co2_sensors_integration';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Pre-deployment operations and calibrations" href="co2_pre_deployment.html" />
+    <link rel="prev" title="2. Introduction" href="co2_introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/IARC.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/IARC.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Carbon Dioxide SOP
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="co2_authors_SOP_development_process.html">1. Authors, development process and contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_introduction.html">2. Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Sensors and integrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_pre_deployment.html">4. Pre-deployment operations and calibrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_mission_execution.html">5. Mission execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_rtqc.html">6. Required Metadata, Real Time Data Processing &amp; Quality Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_post_recovery.html">7. Post-recovery operations and calibrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_dmqc.html">8. Delayed Mode Quality Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_sharing.html">9. Data sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_references.html">10. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_acknowledgement.html">11. Acknowledgement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="co2_appendix.html">12. Appendices</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/britairving/Carbon_Dioxide_SOP" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/britairving/Carbon_Dioxide_SOP/edit/master/book/sections/co2_sensors_integration.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/britairving/Carbon_Dioxide_SOP/issues/new?title=Issue%20on%20page%20%2Fsections/co2_sensors_integration.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/sections/co2_sensors_integration.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sensors and integrations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pco-sub-2-sub-measurements-based-on-membrane-equilibration-and-ndir-spectrometry">3.1. <em>p</em>CO<sub>2</sub> measurements based on membrane equilibration and NDIR spectrometry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contros-hydroc-sup-tm-sup-co-sub-2-sub-t">3.1.1. CONTROS HydroC<sup>TM</sup> CO<sub>2</sub>T</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-design-of-the-new-seaglider-sg-hydroc-co-sub-2-sub">3.1.1.1. Hardware design of the new Seaglider (SG) HydroC CO_<sub>2</sub>_</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#membrane-type-tough">3.1.1.2. Membrane type: tough</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-integration-with-gliders">3.2. Sensor integration with gliders</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mounting-location">3.2.1. Mounting location</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seaglider">3.2.1.1. Seaglider</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#sg-hydroc-co-sub-2-sub">3.2.1.1.1. SG HydroC CO<sub>2</sub></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#battery">3.2.2. Battery</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.2.1. Seaglider</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.2.1.1. SG HydroC CO<sub>2</sub></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#communication">3.2.3. Communication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.3.1. Seaglider</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.3.1.1. SG HydroC CO<sub>2</sub></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sensors-and-integrations">
+<h1><span class="section-number">3. </span>Sensors and integrations<a class="headerlink" href="#sensors-and-integrations" title="Permalink to this heading">#</a></h1>
+<section id="pco-sub-2-sub-measurements-based-on-membrane-equilibration-and-ndir-spectrometry">
+<h2><span class="section-number">3.1. </span><em>p</em>CO<sub>2</sub> measurements based on membrane equilibration and NDIR spectrometry<a class="headerlink" href="#pco-sub-2-sub-measurements-based-on-membrane-equilibration-and-ndir-spectrometry" title="Permalink to this heading">#</a></h2>
+<p>Sensors, such the HydroC CO2, equilibrate <em>p</em>CO<sub>2</sub> with a gas phase (i.e. headspace) and measure CO<sub>2</sub> concentrations with an optical absorption detector, i.e. a non-dispersive infrared (NDIR) detector. Partial pressure equilibration is achieved by a semipermeable membrane of tubular or flat design that separates the headspace from the seawater. To withstand the hydrostatic pressure, the membrane is mechanically supported. This type of sensor enables continuous partial pressure measurements and features implemented means for drift correction. The ability to determine the <em>in situ</em> response time of the sensor enables the user to correct for hysteresis through data post processing. This is a critical feature for a sensor operated on an autonomous platform that may often encounter strong <em>p</em>CO<sub>2</sub> gradients.</p>
+<section id="contros-hydroc-sup-tm-sup-co-sub-2-sub-t">
+<h3><span class="section-number">3.1.1. </span>CONTROS HydroC<sup>TM</sup> CO<sub>2</sub>T<a class="headerlink" href="#contros-hydroc-sup-tm-sup-co-sub-2-sub-t" title="Permalink to this heading">#</a></h3>
+<p>The CONTROS HydroC<sup>TM</sup> CO<sub>2</sub>T sensor, manufactured by <a class="reference external" href="https://www.4h-jena.de/en/maritime-technologies/sensors/">4H JENA Engineering GmbH</a>, Kiel, Germany, is a mature, commercially available product that meets the design requirements of having a fast, stable, and easily verifiable response time to changes in <em>p</em>CO<sub>2</sub>, and a membrane design that is capable of withstanding the rigors of repeated glider profiles through a range of pressures <span id="id1">[<a class="reference internal" href="co2_references.html#id6" title="Björn Fiedler, Peer Fietzek, Nuno Vieira, Péricles Silva, Henry C. Bittig, and Arne Körtzinger. In situ co2 and o2 measurements on a profiling float. Journal of Atmospheric and Oceanic Technology, 30(1):112 - 126, 2013. URL: https://journals.ametsoc.org/view/journals/atot/30/1/jtech-d-12-00043_1.xml, doi:10.1175/JTECH-D-12-00043.1.">Fiedler <em>et al.</em>, 2013</a>]</span>.</p>
+<figure class="align-default" id="hydroc">
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/sensor_integration.png"><img alt="hydroc" class="bg-primary mb-1" src="../_images/sensor_integration.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">(top) Drawing of the pCO<sub>2</sub> sensor as used in the present study, but with original form factor. The sensor is equipped with a water pump (SBE 5T or 5M) and a flow head. (bottom) Schematic drawing of the sensor. Partial pressure equilibration occurs at the planar, semipermeable membrane separating the water from the internal head space of approximately 20 mL. A pump continuously circulates the gas between the membrane equilibrator, a heater, and the NDIR detector. Valves can be toggled to realize a zero gas measurement by guiding the gas stream through a soda lime cartridge instead of through the membrane equilibrator <span id="id2">[<a class="reference internal" href="co2_references.html#id3" title="Peer Fietzek, Björn Fiedler, Tobias Steinhoff, and Arne Körtzinger. In situ quality assessment of a novel underwater pco2 sensor based on membrane equilibration and ndir spectrometry. Journal of Atmospheric and Oceanic Technology, 31(1):181 - 196, 2014. URL: https://journals.ametsoc.org/view/journals/atot/31/1/jtech-d-13-00083_1.xml, doi:10.1175/JTECH-D-13-00083.1.">Fietzek <em>et al.</em>, 2014</a>]</span> .</span><a class="headerlink" href="#hydroc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="hardware-design-of-the-new-seaglider-sg-hydroc-co-sub-2-sub">
+<h4><span class="section-number">3.1.1.1. </span>Hardware design of the new Seaglider (SG) HydroC CO_<sub>2</sub>_<a class="headerlink" href="#hardware-design-of-the-new-seaglider-sg-hydroc-co-sub-2-sub" title="Permalink to this heading">#</a></h4>
+<p>The new SG HydroC CO<sub>2</sub> sensor is a modified version of the original CONTROS HydroC<sup>TM</sup> CO<sub>2</sub>T sensor to allow for integration inside the Seaglider fairing. The standard high performance HydroC CO2 sensor was changed from ⌀ 89 x 380 mm to ⌀ 136 x 294 mm by rearranging the gas-cycle components and the control unit. This new SG HydroC CO2 sensor is available in a POM housing rated to 300 m for coastal missions and a titanium housing rated to 1000 m for offshore deeper missions. Detailed HydroC SG HydroC CO<sub>2</sub> specifications can be found in the <a class="reference internal" href="#spec-table"><span class="std std-ref">specifications table</span></a>.</p>
+<figure class="align-default" id="spec-table">
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/table_integration.png"><img alt="spec" class="bg-primary mb-1" src="../_images/table_integration.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">CONTROS HydroC<sup>TM</sup> CO2T Sensor specifications</span><a class="headerlink" href="#spec-table" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="membrane-type-tough">
+<h4><span class="section-number">3.1.1.2. </span>Membrane type: tough<a class="headerlink" href="#membrane-type-tough" title="Permalink to this heading">#</a></h4>
+<p><span id="id3">[<a class="reference internal" href="co2_references.html#id3" title="Peer Fietzek, Björn Fiedler, Tobias Steinhoff, and Arne Körtzinger. In situ quality assessment of a novel underwater pco2 sensor based on membrane equilibration and ndir spectrometry. Journal of Atmospheric and Oceanic Technology, 31(1):181 - 196, 2014. URL: https://journals.ametsoc.org/view/journals/atot/31/1/jtech-d-13-00083_1.xml, doi:10.1175/JTECH-D-13-00083.1.">Fietzek <em>et al.</em>, 2014</a>]</span> used a CONTROS HydroC<sup>TM</sup> CO<sub>2</sub> with a silicone, polydimethylsiloxane (PDMS) membrane and reported a linear response time dependency on water temperature on the order of -1 s per 1 °C. However, here we use the SG HydroC CO<sub>2</sub> sensor with the new robust TOUGH membrane, which uses Teflon AF2400 as the active separation layer and the permeability coefficient is not temperature dependent <span id="id4">[<a class="reference internal" href="co2_references.html#id9" title="Ingo Pinnau and Lora G. Toy. Gas and vapor transport properties of amorphous perfluorinated copolymer membranes based on 2,2-bistrifluoromethyl-4,5-difluoro-1,3-dioxole/tetrafluoroethylene. Journal of Membrane Science, 109(1):125-133, 1996. URL: https://www.sciencedirect.com/science/article/pii/037673889500193X, doi:https://doi.org/10.1016/0376-7388(95)00193-X.">Pinnau and Toy, 1996</a>]</span>.</p>
+</section>
+</section>
+</section>
+<section id="sensor-integration-with-gliders">
+<h2><span class="section-number">3.2. </span>Sensor integration with gliders<a class="headerlink" href="#sensor-integration-with-gliders" title="Permalink to this heading">#</a></h2>
+<section id="mounting-location">
+<h3><span class="section-number">3.2.1. </span>Mounting location<a class="headerlink" href="#mounting-location" title="Permalink to this heading">#</a></h3>
+<section id="seaglider">
+<h4><span class="section-number">3.2.1.1. </span>Seaglider<a class="headerlink" href="#seaglider" title="Permalink to this heading">#</a></h4>
+<section id="sg-hydroc-co-sub-2-sub">
+<h5><span class="section-number">3.2.1.1.1. </span>SG HydroC CO<sub>2</sub><a class="headerlink" href="#sg-hydroc-co-sub-2-sub" title="Permalink to this heading">#</a></h5>
+<p>The SG HydroC CO<sub>2</sub> sensor is installed in the forward fairing of the M1 Seaglider. The integration requires a 40 cm fairing extension with a fiberglass ring to fit the sensor, Seabird pump, and cables (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 3.3</span></a>). The STEP file for machining the fairing extension on an M1 Seaglider can be accessed in <a class="reference internal" href="co2_appendix.html#machine-files"><span class="std std-numref">Section 12.2.3</span></a>. The sensor must be mounted with the membrane facing aft (toward the altimeter), supporting the escape of potential bubbles within the internal tubing of the sensor during the downcast of the first dive. The 300 m version “SG HydroC CO<sub>2</sub> POM” can be installed with simple brackets (<a class="reference internal" href="#mountingphoto"><span class="std std-numref">Fig. 3.4</span></a>). The 1000 m version “SG HydroC CO<sub>2</sub> Titanium” requires a syntactic foam <a class="reference external" href="https://ess.globecomposite.com/microsphere-syntactic-foam">Engineered Syntactic Systems MZ-22</a> coat to balance out the weight (<a class="reference internal" href="#mountingphoto"><span class="std std-numref">Fig. 3.4</span></a>).</p>
+<p>The pump inlet should be oriented such that the pump inlet tube length is minimized, sediment is not entrained if the glider impacts the seafloor (i.e. not on the bottom), it is as symmetrical as possible to lessen any influence on the hydrodynamics and ballasting, and that air entrainment is minimized when the glider is at the surface.</p>
+<p>The HydroC CO<sub>2</sub> extended cable is passed through between the seaglider pupa and fairings to the aft of the glider.</p>
+<p>With the extended fairing closed, it was not possible to switch the seaglider on/off with the magnetic wand. This is resolved when using RevE since the seaglider can be turned on/off from a port in the aft, accessible via the aft hatch.</p>
+<figure class="align-default" id="id5">
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/CO2Seaglider.png"><img alt="Seaglider" class="bg-primary mb-1" src="../_images/CO2Seaglider.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Schematic view of internal HydroC CO<sub>2</sub> integration into an extended M1 Seaglider fairing. Shown is the HydroC CO2 positioned with the membrane facing the transducer for optimal bubble escapement on downcast, Syntactic foam surrounds the titanium housed HydroC CO<sub>2</sub> with channels for water flow. The extended HydroC CO<sub>2</sub> cable is passed back between the pupa and fairings to the aft of the glider (not shown).</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="mountingphoto">
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/mounting.png"><img alt="mount" class="bg-primary mb-1" src="../_images/mounting.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">SG HydroC CO2 sensor mounting designs. a) Titanium SG HydroC CO2 (rated to 1000m) in a custom syntactic foam coat and b) POM SG HydroC CO2 (rated to 300m) with brackets.</span><a class="headerlink" href="#mountingphoto" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="battery">
+<h3><span class="section-number">3.2.2. </span>Battery<a class="headerlink" href="#battery" title="Permalink to this heading">#</a></h3>
+<section id="id6">
+<h4><span class="section-number">3.2.2.1. </span>Seaglider<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<section id="id7">
+<h5><span class="section-number">3.2.2.1.1. </span>SG HydroC CO<sub>2</sub><a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h5>
+<p>During the initial CO2 Seaglider development, a 10/10/24 V battery setup was used with the M1 Seaglider. The HydroC ran off the 24 V battery because it requires extra voltage during warm-up.</p>
+<p>During this project, the max allowed current through the tailboard was 1 amp. When the sensor was on with heating at max and the external pump on it required 21W, which, at 24V, is just under 1 Amp so this worst-case scenario during warm up was OK. Normally the water pump does not have to be on when the heater is on so nominally we expected the power draw of the HydroC to be 14W = 0.6 Amp which was well below the max allowed current of the tailboard.</p>
+<p>We estimated 18 days mission longevity given the CSG HydroC CO2 consumes around 7W (&#64;13V) at 5°C water temp including the 5M Seabird pump.</p>
+</section>
+</section>
+</section>
+<section id="communication">
+<h3><span class="section-number">3.2.3. </span>Communication<a class="headerlink" href="#communication" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h4><span class="section-number">3.2.3.1. </span>Seaglider<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<section id="id9">
+<h5><span class="section-number">3.2.3.1.1. </span>SG HydroC CO<sub>2</sub><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h5>
+<p>The Seaglider firmware has a feature to allow easy integration of “logging devices,” which provides a way to build commands for the pilot on land to switch the sensor on and off and change sampling strategy during the mission (on/off below or above certain depth) when it comes to the surface and communicates with shore via satellite. The HydroC CO<sub>2</sub> is used in LogDev mode (logging on sensor, allows the user to add a new sensor without changing the seaglider code base), rather than SerDev mode (serial comms with sensor and data transfer to glider CPU). An ASCII configuration file (hydroc.cnf file, see <a class="reference internal" href="co2_appendix.html#hydroc-config-appen"><span class="std std-numref">Section 12.2.1</span></a>) is used to define the device configuration. For more information see the <em>4900041 - Logdev User Guide.pdf</em> (provided during training or included with the seaglider documentation).</p>
+<p>To take full advantage of the ability of the HydroC, a more-advanced electronic integration was carried out using Smart Interoperable Real-time Maritime Assembly (<a class="reference external" href="https://cyprus-subsea.com/products/sirma/">SIRMA™</a>, registered trademark of Cyprus Subsea Consulting and Services, C.S.C.S., Ltd.). This small programmable electronic circuit contained hardware elements to adapt the sensor power and communication requirements to those available on the host platform. It also allowed for separate storage and processing capabilities to supplement the main host processor that controls the flight, sampling, and telecommunications of the host. SIRMA was also programmed to extract raw data from the HydroC and calculate bin average of some of the output fields which were useful for real-time mission adaptation and confirmation of sensor operation. Three levels of output were allowed, depending on how much surfacing time could be tolerated before continuing the mission (Baud rate for Iridium is very low, on the order of 4800 bps).</p>
+<p>The SIRMA was also used to set thresholds and in the event any of the parameters of interest reached a threshold, an error would be logged to the Seaglider log file (see <a class="reference internal" href="co2_mission_execution.html#mission-execution"><span class="std std-numref">Section 5</span></a>).</p>
+<p>The HydroC sleep mode <em>only</em> allows for wake-up after a set time and there is no way to interrupt with a serial cmd such as ‘wake’. It is however possible to come out of sleep mode when the power to the sensor is cycled. This means that sleep mode is best not used at all and the sensor is simply turned on or off when required instead.</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./sections"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="co2_introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="co2_pre_deployment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Pre-deployment operations and calibrations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pco-sub-2-sub-measurements-based-on-membrane-equilibration-and-ndir-spectrometry">3.1. <em>p</em>CO<sub>2</sub> measurements based on membrane equilibration and NDIR spectrometry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contros-hydroc-sup-tm-sup-co-sub-2-sub-t">3.1.1. CONTROS HydroC<sup>TM</sup> CO<sub>2</sub>T</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-design-of-the-new-seaglider-sg-hydroc-co-sub-2-sub">3.1.1.1. Hardware design of the new Seaglider (SG) HydroC CO_<sub>2</sub>_</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#membrane-type-tough">3.1.1.2. Membrane type: tough</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-integration-with-gliders">3.2. Sensor integration with gliders</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mounting-location">3.2.1. Mounting location</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seaglider">3.2.1.1. Seaglider</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#sg-hydroc-co-sub-2-sub">3.2.1.1.1. SG HydroC CO<sub>2</sub></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#battery">3.2.2. Battery</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.2.1. Seaglider</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.2.1.1. SG HydroC CO<sub>2</sub></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#communication">3.2.3. Communication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.3.1. Seaglider</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.3.1.1. SG HydroC CO<sub>2</sub></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brita Irving
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

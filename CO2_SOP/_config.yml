@@ -2,8 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Carbon Dioxide SOP
-author: The Jupyter Book Community
-logo: docs/
+author: Brita Irving
+logo: docs/IARC.jpg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -13,11 +13,7 @@ execute:
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
-
-# Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - co2_references.bib
+    targetname: CO2_SOP.tex
 
 # Information about where the book exists on the web
 repository:
@@ -28,5 +24,19 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
   use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+  comments:
+    utterances:
+      repo: "britairving/Carbon_Dioxide_SOP"
+# Add a bibtex file so that we can create citations
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    html_show_copyright: false
+
+bibtex_reference_style      : author_year_round
+bibtex_default_style        : myapastyle
+bibtex_bibfiles             : co2_references.bib
