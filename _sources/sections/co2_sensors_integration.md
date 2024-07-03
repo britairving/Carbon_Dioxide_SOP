@@ -52,7 +52,7 @@ Schematic view of internal HydroC CO<sub>2</sub> integration into an extended M1
 :::{figure-md} mountingphoto
 <img src="/book_files/mounting.png" alt="mount" class="bg-primary mb-1" width="600px">
 
-SG HydroC CO2 sensor mounting designs. a) Titanium SG HydroC CO2 (rated to 1000m) in a custom syntactic foam coat and b) POM SG HydroC CO2 (rated to 300m) with brackets.
+SG HydroC CO2 sensor mounting designs. a) Titanium SG HydroC CO2 (rated to 1000m) in a custom syntactic foam coat and b) POM SG HydroC CO2 (rated to 300m) with brackets. Figure from {cite}`Haurietal2024`.
 :::
 
 ### Battery

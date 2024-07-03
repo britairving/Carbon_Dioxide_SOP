@@ -5,10 +5,10 @@ This [GitHub repository](https://github.com/britairving/Carbon_Dioxide_SOP) prov
 Please see [Hauri et al., 2024](https://egusphere.copernicus.org/preprints/2024/egusphere-2024-1055/) for more on this project.
 
 ## How to cite the SOP
-Irving, B., Hauri, C., Hayes, D., Abdi, E., Kinski., N, Kemme, J. (2024) 
+Irving, B., Hauri, C., Hayes, D., Abdi, E., Kinski., N. (2024) 
 Carbon Dioxide SOP, Version 1.0.0. 
 (GitHub Repository, Carbon Dioxide SOP. 
-Available: https://github.com/britairving/Carbon_Dioxide_SOP)
+Available: https://britairving.github.io/Carbon_Dioxide_SOP/README.html)
 
 ## Feedback and review
 Feedback is welcome.
