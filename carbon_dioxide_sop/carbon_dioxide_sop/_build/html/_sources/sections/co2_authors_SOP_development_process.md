@@ -14,11 +14,9 @@ Carbon Dioxide SOP
 
 5\. Nadja Kinski, *4H-JENA engineering GmbH*
 
-6\. Jöran Kemme, *4H-JENA engineering GmbH*
-
 ## SOP development process
 
-1) Initial SOP was drafted by [Brita Irving](<https://github.com/britairving>), and [Claudine Hauri](<https://github.com/chauri>) with input from all co-authors. 
+1) Initial SOP was drafted by [Brita Irving](<https://github.com/britairving>), [Claudine Hauri](<https://github.com/chauri>) edited and provided input on content, and other co-authors addressed questions and reviewed the SOP. 
 
 2) SOP was moved to this repository by [Brita Irving](<https://github.com/britairving>) in July 2024.
 

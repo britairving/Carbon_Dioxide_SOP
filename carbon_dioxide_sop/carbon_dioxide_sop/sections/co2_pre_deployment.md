@@ -8,7 +8,7 @@ In addition to the standard pre-deployment procedures necessary for any ocean gl
 
 ### Manufacturer calibration
 
-An in-water 4-point calibration is performed at the manufacturer given expected temperatures supplied by the user. The sensor is calibrated in deionised water, sodium carbonate and bicarbonate are added to simulate seawater, against a flow-through *p*CO<sub>2</sub> system calibrated against primary and secondary standards {cite}'Fietzeketal2014'. To ensure the best quality data returns, a post-calibration at the manufacturer should be carried out to account for changes in the characteristics of the NDIR sensor.
+An in-water 4-point calibration is performed at the manufacturer given expected temperatures supplied by the user. The sensor is calibrated in deionised water, sodium carbonate and bicarbonate are added to simulate seawater, against a flow-through *p*CO<sub>2</sub> system calibrated against primary and secondary standards {cite}`Fietzeketal2014`. To ensure the best quality data returns, a post-calibration at the manufacturer should be carried out to account for changes in the characteristics of the NDIR sensor.
 
 (response_time_verification)=
 ### Response time verification
@@ -25,7 +25,7 @@ For estimating the response time, we look at the signal recovery from zero to am
 :::{figure-md} zeroing
 <img src="/book_files/zeroing.png" alt="zeroing" class="bg-primary mb-1" width="500px">
 
-Zero cycle including zero CO<sub>2</sub> gas measurement and the subsequent flush of the zero gas with the ambient, or sample, gas. In the inset box, the whole zeroing cycle can be seen where *p*CO<sub>2</sub> drops to zero, then climbs rapidly as the two gas volumes mix (zero gas + ambient gas during the internal mixing). At the end of the internal mixing (yellow star), the time for the signal to recover to 63 % of the ambient concentration is the sensor response time, or 𝝉<sub>63</sub>.
+Zero cycle including zero CO<sub>2</sub> gas measurement and the subsequent flush of the zero gas with the ambient, or sample, gas. In the inset box, the whole zeroing cycle can be seen where *p*CO<sub>2</sub> drops to zero, then climbs rapidly as the two gas volumes mix (zero gas + ambient gas during the internal mixing). At the end of the internal mixing (yellow star), the time for the signal to recover to 63 % of the ambient concentration is the sensor response time, or 𝝉<sub>63</sub>. Figure adapted from *2021-01-14_Data_Processing_HydroC_CO2-2.pdf*.
 :::
 
 

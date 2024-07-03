@@ -20,7 +20,7 @@ Example thresholds for HydroC CO<sub>2</sub>
 - T_control must stay around +/- 0.5 degree of set temperature.
 - P_pump 0.3-1.6 W, **outside of this** may indicate a problem.
 
-During a mission while the glider is at the surface, it may be useful for data processing and response time verification to have the HydroC perform a zeroing interval. See Appendix 12.1.1 HydroC<sup>TM</sup> CO<sub>2</sub>T Zeroing for instructions on how to do this while connected to the Seaglider.
+During a mission while the glider is at the surface, it may be useful for data processing and response time verification to have the HydroC perform a zeroing interval. See {numref}`hydroc_zero_through_seaglider` for instructions on how to do this while connected to the Seaglider.
 
 ## In situ reference data
 
