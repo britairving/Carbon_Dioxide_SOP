@@ -11,7 +11,7 @@ The CONTROS HydroC<sup>TM</sup> CO<sub>2</sub>T sensor, manufactured by [4H JENA
 :::{figure-md} hydroc
 <img src="/book_files/sensor_integration.png"  alt="hydroc" class="bg-primary mb-1" width="500px">>
 
-(top) Drawing of the pCO<sub>2</sub> sensor as used in the present study, but with original form factor. The sensor is equipped with a water pump (SBE 5T or 5M) and a flow head. (bottom) Schematic drawing of the sensor. Partial pressure equilibration occurs at the planar, semipermeable membrane separating the water from the internal head space of approximately 20 mL. A pump continuously circulates the gas between the membrane equilibrator, a heater, and the NDIR detector. Valves can be toggled to realize a zero gas measurement by guiding the gas stream through a soda lime cartridge instead of through the membrane equilibrator {cite}`Fietzeketal2014` .
+(top) Drawing of the pCO<sub>2</sub> sensor as used in the present study, but with original form factor. The sensor is equipped with a water pump (SBE 5T or 5M) and a flow head. (bottom) Schematic drawing of the sensor. Partial pressure equilibration occurs at the planar, semipermeable membrane separating the water from the internal head space of approximately 20 mL. A pump continuously circulates the gas between the membrane equilibrator, a heater, and the NDIR detector. Valves can be toggled to realize a zero gas measurement by guiding the gas stream through a soda lime cartridge instead of through the membrane equilibrator {cite}`Fietzeketal2014`.
 :::
 #### Hardware design of the new Seaglider (SG) HydroC CO_<sub>2</sub>_
 

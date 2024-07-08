@@ -13,7 +13,7 @@ An in-water 4-point calibration is performed at the manufacturer given expected 
 (response_time_verification)=
 ### Response time verification
 
-The response time with the HydroC CO<sub>2</sub> TOUGH membrane is very stable but is affected by pump speed, tube length, etc.. The below is included if the user wishes to verify the response time in the field to ensure the highest quality post-processed data product. The response time can be verified in the lab in a bucket or tank, or at deployment or recovery when the glider will be stationary for approximately 15 minutes and *p*CO<sub>2</sub> concentrations are stable. See {numref}`hydroc_zero_through_seaglider` for instructions how to perfor a zeroing through the Seaglider communication cable. 
+The response time with the HydroC CO<sub>2</sub> TOUGH membrane is very stable but is affected by pump speed, tube length, etc.. The below is included if the user wishes to verify the response time in the field to ensure the highest quality post-processed data product. The response time can be verified in the lab in a bucket or tank, or at deployment or recovery when the glider will be stationary for approximately 15 minutes and *p*CO<sub>2</sub> concentrations are stable. See {numref}`hydroc_zero_through_seaglider` for instructions how to perform a zeroing through the Seaglider communication cable. 
 
 For estimating the response time, we look at the signal recovery from zero to ambient conditions, so we have to consider how the zeroing works:
 
@@ -30,4 +30,4 @@ Zero cycle including zero CO<sub>2</sub> gas measurement and the subsequent flus
 
 
 ## Sensor configuration for deployment
-The HydroC should be set to collect high resolution (<5 Hz) data to aloow accurate response time correction (see {numref}`response_time_correction`). 
+The HydroC should be set to collect high resolution (<5 Hz) data to allow accurate response time correction (see {numref}`response_time_correction`). 
