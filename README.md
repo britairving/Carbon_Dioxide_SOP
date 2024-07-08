@@ -1,6 +1,6 @@
 # Carbon Dioxide SOP
 
-This [GitHub repository](https://github.com/britairving/Carbon_Dioxide_SOP) provides a standard operating procedure (SOP) document for carbon dioxide (CO<sub>2</sub>) with the aim of providing documentation to future users of some of the steps necessary to collect good quality partial pressure of carbon dioxide (*p*CO<sub>2</sub>) data with a CONTROS HydroCTM CO2T sensor installed on a M1 Seaglider for both real time and post deployment data streams. It is the hope of the authors that this SOP will be expanded in the future to include other *p*CO<sub>2</sub> sensors and ocean gliders. This SOP is a work in progress and has been modeled after the [Ocean Gliders community SOP](https://github.com/OceanGlidersCommunity) format with that hope in mind. 
+This [GitHub repository](https://github.com/britairving/Carbon_Dioxide_SOP) provides a standard operating procedure (SOP) document for carbon dioxide (CO<sub>2</sub>) with the aim of providing documentation to future users of some of the steps necessary to collect good quality partial pressure of carbon dioxide (*p*CO<sub>2</sub>) data with a CONTROS HydroCTM CO2T sensor installed on a M1 Seaglider for both real time and post deployment data streams. This SOP is a work in progress and has been modeled after the [Ocean Gliders community SOP](https://github.com/OceanGlidersCommunity) format. The authors encourage others to expand the SOP to include other *p*CO<sub>2</sub> sensors and ocean gliders.
 
 Read the SOP [here](https://britairving.github.io/Carbon_Dioxide_SOP/README.html)!
 
